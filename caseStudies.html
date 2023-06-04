@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/swiper-bundle.css">
+    <style>
+       
+      </style>
+    <style>
+         @font-face {
+            font-family: 'sizeA';
+            src: url('./Roboto/Roboto-Medium.ttf');
+        }
+        @font-face {
+            font-family: 'sizeB';
+            src: url('./Roboto/Roboto-Regular.ttf');
+        }
+
+        .sizeA{
+            font-family: 'sizeA' !important;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: 'sizeB';
+            
+        }
+        
+         html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+  
+        body {
+          /* background: #eee; */
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+  
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+  
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+  
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+
+        .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        right: 20px !important;
+        left: auto;
+        }
+        .swiper-button-prev, .swiper-rtl .swiper-button-next {
+            left: 20px;
+            right: auto;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        /*  */
+         
+        .box{
+            width: 1350px;
+            height: 1000px;
+            margin: auto;
+            padding-top: 30px;
+        }
+
+        .nav{
+            width: 100%;
+            height: 90px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        .nav ul{
+            width: 650px;
+            display: flex;
+            height: 100%;
+            justify-content: space-between;
+            align-items: flex-end;
+
+        }
+        .nav span{
+            font-size: 40px;
+            line-height: 90px;
+        }
+        .nav ul li{
+            height: 40px;
+            padding: 0 17px;
+            list-style: none;
+            text-align: center;
+            line-height: 40px;
+            font-size: 20px;
+            position: relative;
+            z-index: 2;
+            border: 2px solid #313034;
+            box-sizing: border-box;
+            border-bottom: none;
+            border-left: 1px solid #313034;
+
+        }
+        .nav ul li a{
+            display: block;
+            text-decoration: none;
+            color: #313034;
+        }
+
+        .l1{
+            background-color: white;
+            z-index: 9 !important;
+
+        }
+        .l1::after{
+            position: absolute;
+    content: '';
+    display: block;
+    height: 49px;
+    width: 43px;
+    top: 3px;
+    left: -9px;
+    z-index: -99;
+    background-color: rgb(255, 255, 255);
+    clip-path: polygon(50% 11px,100% 102%,1px 100%);
+    border: 2px solid #313034;
+    transform: rotateZ(113deg);
+    z-index: -1;
+        }
+        .l2{
+            background: #dbdcd1;
+            z-index: 10 !important;
+
+
+        }
+        .l2::after{
+            position: absolute;
+    content: '';
+    display: block;
+    height: 49px;
+    width: 43px;
+    top: 3px;
+    left: -9px;
+    z-index: -99;
+    background-color:#dbdcd1;
+    clip-path: polygon(50% 11px,100% 102%,1px 100%);
+    border: 2px solid #313034;
+    transform: rotateZ(113deg);
+    z-index: -1;
+        }
+        .l3{
+            background: #b7ce59;
+            z-index: 7 !important;
+
+        }
+        .l3::after{
+            position: absolute;
+            content: '';
+            display: block;
+            height: 49px;
+            width: 43px;
+            top: 3px;
+            left: -9px;
+            z-index: -99;
+            background-color:#b7ce59;
+            clip-path: polygon(50% 11px,100% 102%,1px 100%);
+            border: 2px solid #313034;
+            transform: rotateZ(113deg);
+            z-index: -1;
+        }
+        .l4{
+            background: #a3a2ea;
+            z-index: 6 !important;
+
+        }
+        .l4::after{
+            position: absolute;
+            content: '';
+            display: block;
+            height: 49px;
+            width: 43px;
+            top: 3px;
+            left: -9px;
+            z-index: -99;
+            background-color:  #a3a2ea;
+            clip-path: polygon(50% 11px,100% 102%,1px 100%);
+            border: 2px solid #313034;
+            transform: rotateZ(113deg);
+            z-index: -1;
+            
+        }
+        .l5{
+            background: #aedc9c;
+            z-index: 5 !important;
+
+        }
+        .l5::after{
+            position: absolute;
+            content: '';
+            display: block;
+            height: 49px;
+            width: 43px;
+            top: 3px;
+            left: -9px;
+            z-index: -99;
+            background-color: #aedc9c;
+            clip-path: polygon(50% 11px,100% 102%,1px 100%);
+            border: 2px solid #313034;
+            transform: rotateZ(113deg);
+            z-index: -1;
+        }
+        .nav ul li:hover {
+            font-size: 22px;
+            z-index: 99 !important;
+        }
+        /*  */
+        .con{
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid #313034;
+            border-bottom: none;
+        }
+        .conA{
+            width: 100%;
+            height: 200px;
+            border-bottom: 2px solid #313034;
+            background-color: #dbdcd1;
+            padding: 50px 40px;
+            box-sizing: border-box;
+        }
+        .conAa{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .conAa>div{
+            flex: 1;
+        }
+        .conAa>div:nth-child(2){
+            text-align: right;
+        }
+        /*  conB*/
+        .conB{
+            width: 100%;
+            height: 720px;
+            border-bottom: 2px solid #313034;
+            box-sizing: border-box;
+            padding: 80px 70px;
+            background-color: #909c8f;
+            position: relative;
+
+
+        }
+        .conBa{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            border: 2px solid #313034;
+        }
+      
+        /*  */
+        .f{
+            height: 40px;
+            line-height: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* 颜色 */
+        .n1{
+            background-color: #a3a2ea;
+        }
+        .n2{
+            background-color: #b9d944;
+        }
+        .n3{
+            background-color: #9a1261;
+        }
+        .n4{
+            background-color: #e12d7e;
+        }
+        /*  */
+        .m1{
+            display: none;
+        }
+
+        .conAa p{
+            margin: 5px 0;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div class="nav">
+            <span class="sizeA">Shannan idea</span>
+            <ul>
+                <li class="l1" ><a href="index.html">home</a></li>
+                <li class="l2"><a href="caseStudies.html">case studies</a></li>
+                <li class="l3"><a href="practice.html">practice</a></li>
+                <li class="l4"><a href="aboutMe.html">about me</a></li>
+                <li class="l5"><a href="getInTouch.html">get in touch</a></li>
+            </ul>
+            
+        </div>
+        <div class="con">
+            <div class="conA S1">
+                <div class="conAa">
+                    <div>
+                        <h1 class="sizeA">Brand Ldentity</h1>
+                        <p>Logo Design, Brand Concept & Identity,</p>
+                        <p>product Design, Packaging Design</p>
+                    </div>
+                    <div>
+                        <h1 class="sizeA">Lavas, China</h1>
+                        <p>2021.10-2022.03</p>
+                    </div>
+                </div>
+            </div>
+            <div class="conB n1 m1">
+                <div class="conBa">
+                     <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                        <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                        <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                        <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                        <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                        <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                        
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="swiper-button-next  nextA"></div>
+                <div class="swiper-button-prev prevA"></div>
+            </div>
+            <div class="conA  S1">
+                <div class="conAa">
+                    <div>
+                        <h1 class="sizeA">Brand Ldentity</h1>
+                        <p>Logo Design, Brand Concept & Identity,</p>
+                        <p>product Design, Packaging Design</p>
+                    </div>
+                    <div>
+                        <h1 class="sizeA">Lavas, China</h1>
+                        <p>2021.10-2022.03</p>
+                    </div>
+                </div>
+            </div>
+            <div class="conB n2 m1">
+                <div class="conBa">
+                     <!-- Swiper -->
+                    <div class="swiper mySwiperB">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="swiper-button-next  nextB"></div>
+                <div class="swiper-button-prev prevB"></div>
+            </div>
+            <div class="conA  S1">
+                <div class="conAa">
+                    <div>
+                        <h1 class="sizeA">Brand Ldentity</h1>
+                        <p>Logo Design, Brand Concept & Identity,</p>
+                        <p>product Design, Packaging Design</p>
+                    </div>
+                    <div>
+                        <h1 class="sizeA">Lavas, China</h1>
+                        <p>2021.10-2022.03</p>
+                    </div>
+                </div>
+            </div>
+            <div class="conB n3 m1">
+                <div class="conBa">
+                     <!-- Swiper -->
+                    <div class="swiper mySwiperC">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="swiper-button-next  nextC"></div>
+                <div class="swiper-button-prev prevC"></div>
+            </div>
+            <div class="conA S1">
+                <div class="conAa">
+                    <div>
+                        <h1 class="sizeA">Brand Ldentity</h1>
+                        <p>Logo Design, Brand Concept & Identity,</p>
+                        <p>product Design, Packaging Design</p>
+                    </div>
+                    <div>
+                        <h1 class="sizeA">Lavas, China</h1>
+                        <p>2021.10-2022.03</p>
+                    </div>
+                </div>
+            </div>
+            <div class="conB n4 m1">
+                <div class="conBa">
+                       <!-- Swiper -->
+                       <div class="swiper mySwiperD">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                            <div class="swiper-slide"><img src="./img/A.png" alt="" srcset=""></div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <div class="swiper-button-next nextD"></div>
+                <div class="swiper-button-prev prevD "></div>
+            </div>
+
+        </div>
+        <div class="f"><span></span> <span>&copy;copyright Shannan Hu 2023</span></div>
+
+    </div>
+    <script>
+        const SAll = document.querySelectorAll('.S1')
+        const MAll = document.querySelectorAll('.m1')
+        let flag = false
+        for(let i = 0;i<SAll.length;i++){
+            SAll[i].addEventListener('click',function(){
+                flag = !flag
+                MAll[i].style.display = flag ? 'block':'none'
+            })
+        }
+    </script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          loop:true,
+          navigation: {
+            nextEl: ".nextA",
+            prevEl: ".prevA",
+          },
+        });
+
+        var swiperB = new Swiper(".mySwiperB", {
+          loop:true,
+          navigation: {
+            nextEl: ".nextB",
+            prevEl: ".prevB",
+          },
+        });
+        var swiperC = new Swiper(".mySwiperC", {
+          loop:true,
+          navigation: {
+            nextEl: ".nextC",
+            prevEl: ".prevC",
+          },
+        });
+
+        var swiperD = new Swiper(".mySwiperD", {
+          loop:true,
+          navigation: {
+            nextEl: ".nextD",
+            prevEl: ".prevD",
+          },
+        });
+      
+      </script>
+</body>
+</html>
